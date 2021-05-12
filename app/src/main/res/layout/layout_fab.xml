@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fabBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/BLACK_TRANSLATED">
+
+    <ImageView
+        android:id="@+id/favoriteFab"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:layout_marginEnd="@dimen/marginFab"
+        android:layout_marginBottom="@dimen/marginDouble"
+        android:background="@drawable/fab_button"
+        android:padding="@dimen/marginDefault"
+        android:stateListAnimator="@animator/animator_btn"
+        app:layout_constraintBottom_toTopOf="@id/gpsFab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_favorite_black_48dp"
+        app:tint="@color/WHITE"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/gpsFab"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:layout_marginEnd="@dimen/marginFab"
+        android:layout_marginBottom="@dimen/marginDouble"
+        android:background="@drawable/fab_button"
+        android:padding="@dimen/marginDefault"
+        android:stateListAnimator="@animator/animator_btn"
+        app:layout_constraintBottom_toTopOf="@id/themeFab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_my_location_black_48dp"
+        app:tint="@color/WHITE"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/themeFab"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:layout_marginEnd="@dimen/marginFab"
+        android:layout_marginBottom="@dimen/marginDouble"
+        android:background="@drawable/fab_button"
+        android:padding="@dimen/marginDefault"
+        android:stateListAnimator="@animator/animator_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/themeLayout"
+        app:srcCompat="@drawable/ic_color_lens_black_48dp"
+        tools:ignore="ContentDescription" />
+
+    <include
+        android:id="@+id/themeLayout"
+        layout="@layout/item_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/marginDouble"
+        android:layout_marginBottom="@dimen/marginFab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/themeFab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

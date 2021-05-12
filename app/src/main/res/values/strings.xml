@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">구미 버스탈래요</string>
+    <string name="CITY_NAME">구미</string>
+    <string name="CITY_CODE">37050</string>
+
+    <!-- Bus App -->
+    <string name="apiKey1">[key]</string>
+
+    <string name="AppId">[key]</string>
+    <string name="validBannerAdMain">[key]</string>
+    <string name="validBannerAdClose">[key]</string>
+    <string name="validBannerAdSearch">[key]</string>
+    <string name="testBannerAd">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="BannerAdMain">@string/validBannerAdMain</string>
+    <string name="BannerAdClose">@string/validBannerAdClose</string>
+    <string name="BannerAdSearch">@string/validBannerAdSearch</string>
+
+    <string name="type1">일반</string>
+    <string name="type2">좌석</string>
+
+    <string name="initPageMsg">주변 정류장을 찾아보세요</string>
+
+    <string name="hintSearch">정류소, 노선을 검색하세요.</string>
+    <string name="searchNoResult">알맞은 검색 결과가 없습니다</string>
+    <string name="loadingGpsInfo">주변 정류장을 찾는 중입니다.\n다소 시간이 걸릴 수 있습니다.</string>
+    <string name="noGpsInfo">근처에 위치한 정류장을 찾지 못했습니다.</string>
+    <string name="noInformation">정보가 없습니다</string>
+
+    <string name="loadingStationInfo">버스 도착 예정 정보를 불러오는 중입니다.</string>
+    <string name="noStationInfo">버스 도착 예정 정보가 없습니다.</string>
+
+    <string name="loadingRouteInfo">운행 정보를 불러오는 중입니다.</string>
+    <string name="noRouteInfo">현재 운행중인 버스가 없습니다.</string>
+
+    <string name="mapRouteWarning">해당 경로는 실제 버스 운행 경로와 다를 수 있습니다</string>
+
+    <string name="dataLoadingSuccess">실시간 정보를 반영하였습니다</string>
+
+    <string name="networkOffline">네트워크 연결이 원활하지 않습니다</string>
+    <string name="noResultBecauseOfError">실시간 정보를 불러오지 못했습니다.</string>
+    <string name="networkError">네트워크가 연결되어 있지 않아 실시간 정보를 불러올 수 없습니다.</string>
+    <string name="serverError">버스정보 제공처의 서버문제로 인해 실시간 정보를 불러올 수 없습니다.</string>
+
+    <string name="toPermissionSetting">위치 권한이 없어 현재 위치 정보를 불러오지 못했습니다\n권한 설정 페이지로 이동하시겠습니까?</string>
+    <string name="noPermission">위치 권한이 없어 현재 위치 정보를 불러오지 못했습니다.</string>
+    <string name="noLocationFunction">위치 서비스를 활성화하시면 이용하실 수 있습니다.</string>
+
+    <string name="titleHistory">최근에 찾아봤어요</string>
+    <string name="titleRecommend">이 정류장과 노선을 찾으시나요?</string>
+    <string name="btnHistoryDelete">기록 지우기</string>
+    <string name="btnMore">찾으시는 정류장과 노선이 없으신가요?</string>
+    <string name="msgHistoryDelete">정류장과 노선 조회 기록을 지우시겠습니까?</string>
+
+    <string name="settingGuide1">모든 정류장과 버스 정보는 공공데이터포털(data.go.kr)에서 제공받은 정보입니다</string>
+    <string name="settingGuide2">모든 개인정보들은 서버에 저장되지 않습니다</string>
+    <string name="settingGuide3">앱을 지우시면 즐겨찾기, 방문기록 등의 정보가 사라지니 주의해주세요</string>
+    <string name="titleKakaoTalk">카카오톡으로 앱 공유하기</string>
+    <string name="titleGooglePlay">앱 평가하기</string>
+    <string name="kakaoMessage">구미 버스탈래요 어플을 이용해보세요\nhttps://play.google.com/store/apps/details?id=com.jin.businfo_gumi</string>
+    <string name="noKakao">카카오톡이 설치되어 있지 않습니다</string>
+    <string name="noGooglePlay">구글플레이 어플이 설치되어 있지 않습니다</string>
+    <string name="license">License</string>
+
+    <string name="closeApp">어플리케이션을 종료하시겠습니까?</string>
+
+    <!-- Default -->
+    <string name="msg_confirm">확인</string>
+    <string name="msg_cancel">취소</string>
+    <string name="msg_send">전송</string>
+
+    <!-- Tutorial -->
+    <string name="tutorial1">자주 이용하는 버스와 정류장을 한 눈에 볼 수 있어요</string>
+    <string name="tutorial2">근처 정류장을 찾아보세요</string>
+    <string name="tutorial3">테마를 변경해보세요</string>
+
+</resources>

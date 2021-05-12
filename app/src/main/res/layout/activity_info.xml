@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    tools:context=".ui.info.InfoActivity">
+
+    <com.jin.businfo_gumi.widget.StateScrollView
+        android:id="@+id/infoContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="350dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/infoRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/infoContentTitle" />
+
+                <LinearLayout
+                    android:id="@+id/infoContentTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/infoRecyclerView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/WHITE"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/marginDefault" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/infoTypeFakeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/marginDefault"
+                                android:background="@drawable/type_text"
+                                android:maxLines="1"
+                                android:textColor="@color/WHITE"
+                                android:textSize="@dimen/textSize3"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@id/infoTitleTextView"
+                                app:layout_constraintEnd_toStartOf="@id/infoTitleTextView"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/infoTitleTextView"
+                                tools:ignore="SpUsage"
+                                tools:text="type"
+                                tools:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/infoTitleTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/text_black"
+                                android:textStyle="bold"
+                                app:layout_constrainedWidth="true"
+                                app:layout_constraintBottom_toTopOf="@id/infoDescriptionTextView1"
+                                app:layout_constraintEnd_toStartOf="@id/infoTypeTextView"
+                                app:layout_constraintStart_toEndOf="@id/infoTypeFakeTextView"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="SpUsage"
+                                tools:text="title"
+                                tools:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/infoTypeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/marginDefault"
+                                android:background="@drawable/type_text"
+                                android:maxLines="1"
+                                android:textColor="@color/WHITE"
+                                android:textSize="@dimen/textSize3"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@id/infoTitleTextView"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/infoTitleTextView"
+                                app:layout_constraintTop_toTopOf="@id/infoTitleTextView"
+                                tools:ignore="SpUsage"
+                                tools:text="type"
+                                tools:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/infoDescriptionTextView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_gray"
+                                android:textSize="14dp"
+                                app:layout_constraintBottom_toTopOf="@id/infoDescriptionTextView2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/infoTitleTextView"
+                                tools:ignore="SpUsage"
+                                tools:text="start: station" />
+
+                            <TextView
+                                android:id="@+id/infoDescriptionTextView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/text_gray"
+                                android:textSize="14dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toTopOf="@id/infoDescriptionSpace"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/infoDescriptionTextView1"
+                                tools:ignore="SpUsage"
+                                tools:text="end: station"
+                                tools:visibility="visible" />
+
+                            <Space
+                                android:id="@+id/infoDescriptionSpace"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/marginDouble"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/infoDescriptionTextView2" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <Space
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="@dimen/marginDefault" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/infoGuide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gradient_top_white"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="16dp"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12dp"
+                        tools:ignore="SpUsage"
+                        tools:text="guide" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.jin.businfo_gumi.widget.EmptySignView
+                android:id="@+id/infoEmptySignView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:emptySignText="@string/noInformation" />
+
+        </LinearLayout>
+
+    </com.jin.businfo_gumi.widget.StateScrollView>
+
+    <FrameLayout
+        android:id="@+id/infoMapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/infoMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="350dp" />
+
+        <TextView
+            android:id="@+id/infoMapRouteWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:gravity="end"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:shadowColor="@color/text_white"
+            android:shadowDx="2.0"
+            android:shadowDy="2.0"
+            android:shadowRadius="2.0"
+            android:text="@string/mapRouteWarning"
+            android:textColor="@color/text_black"
+            android:textSize="12dp"
+            android:visibility="gone"
+            tools:ignore="SpUsage"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/infoMapCover"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:alpha="0"
+            android:background="@color/WHITE"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/infoMapBottomCover"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_map_bottom_cover"
+            android:elevation="8dp"
+            android:outlineAmbientShadowColor="?attr/themeColor"
+            android:outlineSpotShadowColor="?attr/themeColor"
+            tools:ignore="ContentDescription,UnusedAttribute" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Space
+            android:id="@+id/infoStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/infoNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|top"
+                android:layout_margin="@dimen/marginDefault"
+                android:alpha="0.9"
+                android:background="@drawable/circle_white"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/infoBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|top"
+                android:layout_margin="@dimen/marginDefault"
+                android:padding="@dimen/marginDefault"
+                android:src="@drawable/ic_baseline_arrow_back_24dp"
+                android:stateListAnimator="@animator/animator_btn"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|top"
+                android:layout_margin="@dimen/marginDefault"
+                android:alpha="0.9"
+                android:background="@drawable/circle_white"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/infoFavorite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|top"
+                android:layout_margin="@dimen/marginDefault"
+                android:padding="@dimen/marginDefault"
+                android:src="@drawable/ic_favorite_border_black_48dp"
+                android:stateListAnimator="@animator/animator_btn"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_anchor="@id/infoContent"
+        app:layout_anchorGravity="end|bottom"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior">
+
+        <ImageView
+            android:id="@+id/infoBusFab"
+            android:layout_width="@dimen/fabSize"
+            android:layout_height="@dimen/fabSize"
+            android:layout_margin="@dimen/marginDouble"
+            android:background="@drawable/fab_second_button"
+            android:padding="@dimen/marginDefault"
+            android:stateListAnimator="@animator/animator_btn"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_bus_48dp"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/infoRefreshFab"
+            android:layout_width="@dimen/fabSize"
+            android:layout_height="@dimen/fabSize"
+            android:layout_marginStart="@dimen/marginDouble"
+            android:layout_marginEnd="@dimen/marginDouble"
+            android:layout_marginBottom="@dimen/marginDouble"
+            android:alpha="0.5"
+            android:background="@drawable/fab_button"
+            android:padding="@dimen/marginDefault"
+            android:stateListAnimator="@animator/animator_btn"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_refresh_black_48dp"
+            app:tint="@color/WHITE"
+            tools:alpha="1"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/marginMiniFab"
+    android:paddingEnd="@dimen/marginMiniFab"
+    android:paddingBottom="@dimen/marginDouble">
+
+    <ImageView
+        android:id="@+id/themeFab1"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:clickable="false"
+        android:padding="@dimen/marginMiniFab"
+        android:stateListAnimator="@animator/animator_btn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/themeFab5"
+        app:layout_constraintEnd_toStartOf="@id/themeFab2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fab_button"
+        app:tint="@color/RED"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/themeFab2"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:clickable="false"
+        android:padding="@dimen/marginMiniFab"
+        android:stateListAnimator="@animator/animator_btn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/themeFab6"
+        app:layout_constraintEnd_toStartOf="@id/themeFab3"
+        app:layout_constraintStart_toEndOf="@id/themeFab1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fab_button"
+        app:tint="@color/ORANGE"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/themeFab3"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:clickable="false"
+        android:padding="@dimen/marginMiniFab"
+        android:stateListAnimator="@animator/animator_btn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/themeFab7"
+        app:layout_constraintEnd_toStartOf="@id/themeFab4"
+        app:layout_constraintStart_toEndOf="@id/themeFab2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fab_button"
+        app:tint="@color/YELLOW"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/themeFab4"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:clickable="false"
+        android:padding="@dimen/marginMiniFab"
+        android:stateListAnimator="@animator/animator_btn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/themeFab8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/themeFab3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fab_button"
+        app:tint="@color/GREEN"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/themeFab5"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:clickable="false"
+        android:padding="@dimen/marginMiniFab"
+        android:stateListAnimator="@animator/animator_btn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/themeFab6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/themeFab1"
+        app:srcCompat="@drawable/fab_button"
+        app:tint="@color/BLUE"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/themeFab6"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:clickable="false"
+        android:padding="@dimen/marginMiniFab"
+        android:stateListAnimator="@animator/animator_btn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/themeFab7"
+        app:layout_constraintStart_toEndOf="@id/themeFab5"
+        app:layout_constraintTop_toBottomOf="@id/themeFab2"
+        app:srcCompat="@drawable/fab_button"
+        app:tint="@color/PURPLE"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/themeFab7"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:clickable="false"
+        android:padding="@dimen/marginMiniFab"
+        android:stateListAnimator="@animator/animator_btn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/themeFab8"
+        app:layout_constraintStart_toEndOf="@id/themeFab6"
+        app:layout_constraintTop_toBottomOf="@id/themeFab3"
+        app:srcCompat="@drawable/fab_button"
+        app:tint="@color/PINK"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/themeFab8"
+        android:layout_width="@dimen/fabSize"
+        android:layout_height="@dimen/fabSize"
+        android:clickable="false"
+        android:padding="@dimen/marginMiniFab"
+        android:stateListAnimator="@animator/animator_btn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/themeFab7"
+        app:layout_constraintTop_toBottomOf="@id/themeFab4"
+        app:srcCompat="@drawable/fab_button"
+        app:tint="@color/GRAY"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

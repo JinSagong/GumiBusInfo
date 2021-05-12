@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_dialog_box">
+
+    <TextView
+        android:id="@+id/tv_dlg_msg2_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="@dimen/dimen_default"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_dialog"
+        app:layout_constraintBottom_toTopOf="@id/ll_dlg_msg2_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <LinearLayout
+        android:id="@+id/ll_dlg_msg2_controller"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dlg_msg2_description">
+
+        <TextView
+            android:id="@+id/tv_dlg_msg2_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stateListAnimator="@animator/animator_btn"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/msg_cancel"
+            android:textColor="?attr/colorAccent"
+            android:textSize="@dimen/text_dialog"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/tv_dlg_msg2_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stateListAnimator="@animator/animator_btn"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/msg_confirm"
+            android:textColor="?attr/colorAccent"
+            android:textSize="@dimen/text_dialog"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

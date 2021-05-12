@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    tools:context=".ui.main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/mainLayout"
+            layout="@layout/layout_main" />
+
+        <include
+            android:id="@+id/searchLayout"
+            layout="@layout/layout_search"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_gradient_top_white"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/marginDouble"
+        android:paddingTop="@dimen/marginDefault"
+        android:paddingEnd="@dimen/marginDouble"
+        android:paddingBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/locationLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:padding="@dimen/marginDefault"
+            android:stateListAnimator="@animator/animator_btn"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/locationImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_pin_drop_black_48dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CITY_NAME"
+                android:textColor="@color/text_black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:ignore="SpUsage" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/searchBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/marginDefault"
+            android:src="@drawable/ic_baseline_arrow_back_24dp"
+            android:stateListAnimator="@animator/animator_btn"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/marginDefault"
+            android:background="@drawable/bg_search">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/hintSearch"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/paddingSearch"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/text_black"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="13dp"
+                    tools:ignore="SpUsage" />
+
+                <ImageView
+                    android:id="@+id/searchCloseBtn"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="2dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_close_black_48dp"
+                    android:stateListAnimator="@animator/animator_btn"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/searchInputView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:foreground="@drawable/ripple_effect_16"
+                android:maxLines="1"
+                android:paddingStart="@dimen/paddingSearch"
+                android:paddingTop="10dp"
+                android:paddingEnd="@dimen/paddingSearch"
+                android:paddingBottom="10dp"
+                android:text="@string/hintSearch"
+                android:textColor="@color/text_gray"
+                android:textSize="13dp"
+                tools:ignore="SpUsage,UnusedAttribute" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

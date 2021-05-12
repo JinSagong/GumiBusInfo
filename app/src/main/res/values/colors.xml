@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default Color -->
+    <color name="colorPrimary">@color/WHITE</color>
+    <color name="colorPrimaryDark">@color/WHITE</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorRippleDefault">#e2e2e2</color>
+    <color name="colorLineActionBar">#444444</color>
+    <color name="line_gray">#ebebec</color>
+
+    <!-- Common Color -->
+    <color name="WHITE">#ffffff</color>
+    <color name="BLACK">#000000</color>
+    <color name="BLACK_TRANSLATED">#aa000000</color>
+
+    <!-- Text Color -->
+    <color name="text_black">#222222</color>
+    <color name="text_gray">#666666</color>
+    <color name="text_gray_light">#bababa</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_msg">#5f6caf</color>
+    <color name="text_red">#ff6961</color>
+    <color name="text_blue">#5f6caf</color>
+
+    <!-- Toast Color -->
+    <color name="toast_background">#e6ffffff</color>
+    <color name="toast_error">#ff6961</color>
+    <color name="toast_message">#666666</color>
+
+    <!-- Theme Color -->
+    <color name="RED">#ff6961</color>
+    <color name="ORANGE">#ff8c00</color>
+    <color name="YELLOW">#ffd202</color>
+    <color name="GREEN">#63d463</color>
+    <color name="BLUE">#6495ed</color>
+    <color name="PURPLE">#9370db</color>
+    <color name="PINK">#ff69b4</color>
+    <color name="GRAY">#708090</color>
+
+    <!-- Bus Type Color -->
+    <color name="type1">#888888</color>
+    <color name="type2">#b31762</color>
+
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:background="@color/BLACK_TRANSLATED">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rect_white_round_16"
+        app:layout_constraintBottom_toBottomOf="@id/closeController"
+        app:layout_constraintEnd_toEndOf="@id/closeSpaceEnd"
+        app:layout_constraintStart_toStartOf="@id/closeSpaceStart"
+        app:layout_constraintTop_toTopOf="@id/closeTitle"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/closeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/closeApp"
+        android:textColor="@color/text_black"
+        android:textSize="16dp"
+        ads:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/closeAd"
+        app:layout_constraintEnd_toEndOf="@id/closeSpaceEnd"
+        app:layout_constraintStart_toStartOf="@id/closeSpaceStart"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="SpUsage" />
+
+    <FrameLayout
+        android:id="@+id/closeAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/closeController"
+        app:layout_constraintEnd_toStartOf="@id/closeSpaceEnd"
+        app:layout_constraintStart_toEndOf="@id/closeSpaceStart"
+        app:layout_constraintTop_toBottomOf="@id/closeTitle">
+
+        <TextView
+            android:id="@+id/bgAdView3"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:background="@color/line_gray"
+            android:gravity="center"
+            android:text="Ad"
+            android:textColor="@color/text_gray"
+            android:textSize="12dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            ads:adSize="MEDIUM_RECTANGLE"
+            ads:adUnitId="@string/BannerAdClose" />
+
+    </FrameLayout>
+
+    <Space
+        android:id="@+id/closeSpaceStart"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        ads:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="@id/closeController"
+        app:layout_constraintEnd_toStartOf="@id/closeAd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/closeTitle" />
+
+    <Space
+        android:id="@+id/closeSpaceEnd"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/closeController"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/closeAd"
+        app:layout_constraintTop_toTopOf="@id/closeTitle" />
+
+    <LinearLayout
+        android:id="@+id/closeController"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/closeSpaceEnd"
+        app:layout_constraintTop_toBottomOf="@id/closeAd">
+
+        <TextView
+            android:id="@+id/closeCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            android:stateListAnimator="@animator/animator_btn"
+            android:text="@string/msg_cancel"
+            android:textColor="@color/text_black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/closeConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            android:stateListAnimator="@animator/animator_btn"
+            android:text="@string/msg_confirm"
+            android:textColor="@color/text_black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp">
+
+        <ImageView
+            android:id="@+id/itemInfoForRouteBus1"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_bus_48dp"
+            android:visibility="invisible"
+            tools:ignore="ContentDescription" />
+
+        <FrameLayout
+            android:id="@+id/itemInfoForRouteBus2"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:visibility="invisible"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="start|top"
+                android:padding="8dp"
+                android:src="@drawable/ic_bus_48dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rect_white_round_16"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end|bottom"
+                android:padding="8dp"
+                android:src="@drawable/ic_bus_48dp"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/itemInfoForRouteLine1"
+            android:layout_width="4dp"
+            android:layout_height="20dp"
+            android:alpha="0.8"
+            android:background="?attr/themeColor"
+            app:layout_constraintBottom_toTopOf="@id/itemInfoForRouteLine2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/itemInfoForRouteLine2"
+            android:layout_width="4dp"
+            android:layout_height="48dp"
+            android:alpha="0.8"
+            android:background="?attr/themeColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemInfoForRouteLine1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/circle_white_with_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/itemInfoForRouteContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:stateListAnimator="@animator/animator_btn">
+
+        <TextView
+            android:id="@+id/itemInfoForRouteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            tools:ignore="SpUsage"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/itemInfoForRouteNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/text_gray"
+            android:textSize="12dp"
+            tools:ignore="SpUsage"
+            tools:text="12345" />
+
+    </LinearLayout>
+
+</LinearLayout>

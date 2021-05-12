@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/settingBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/marginDefault"
+        android:padding="@dimen/marginDefault"
+        android:src="@drawable/ic_baseline_arrow_back_24dp"
+        android:stateListAnimator="@animator/animator_btn"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/settingIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_bus_48dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/text_black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/settingGuide1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:stateListAnimator="@animator/animator_btn"
+                android:text="@string/settingGuide1"
+                android:textColor="@color/text_black"
+                android:textSize="13dp"
+                app:drawableStartCompat="@drawable/ic_baseline_check_24dp"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/settingGuide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:stateListAnimator="@animator/animator_btn"
+                android:text="@string/settingGuide2"
+                android:textColor="@color/text_black"
+                android:textSize="13dp"
+                app:drawableStartCompat="@drawable/ic_baseline_check_24dp"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/settingGuide3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:stateListAnimator="@animator/animator_btn"
+                android:text="@string/settingGuide3"
+                android:textColor="@color/text_black"
+                android:textSize="13dp"
+                app:drawableStartCompat="@drawable/ic_baseline_check_24dp"
+                tools:ignore="SpUsage" />
+
+            <LinearLayout
+                android:id="@+id/settingKakao"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:background="@drawable/rect_kakao_round_100"
+                android:foreground="@drawable/ripple_effect_100"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="9dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="9dp"
+                tools:ignore="UnusedAttribute">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/icon_kakao"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/titleKakaoTalk"
+                    android:textColor="#3e2723"
+                    android:textSize="13dp"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingReview"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:background="@drawable/rect_google_play_round_100"
+                android:foreground="@drawable/ripple_effect_100"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="9dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="9dp"
+                tools:ignore="UnusedAttribute">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/icon_google_play"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/titleGooglePlay"
+                    android:textColor="@color/text_black"
+                    android:textSize="13dp"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/settingVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:textColor="@color/text_black"
+                android:textSize="13dp"
+                tools:ignore="SpUsage"
+                tools:text="버전: 1.0.0" />
+
+            <TextView
+                android:id="@+id/settingLicense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:stateListAnimator="@animator/animator_btn"
+                android:text="@string/license"
+                android:textColor="@color/text_black"
+                android:textSize="12dp"
+                tools:ignore="SpUsage" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

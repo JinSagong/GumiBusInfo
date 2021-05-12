@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/searchContentView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="68dp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/bgAdView2"
+                    android:layout_width="320dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@color/line_gray"
+                    android:gravity="center"
+                    android:text="Ad"
+                    android:textColor="@color/text_gray"
+                    android:textSize="12dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    ads:adSize="LARGE_BANNER"
+                    ads:adUnitId="@string/BannerAdSearch" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/searchHistoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/searchHistoryIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_baseline_history_black_48dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/titleHistory"
+                    android:textColor="@color/text_black"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    tools:ignore="SpUsage" />
+
+                <TextView
+                    android:id="@+id/searchHistoryDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:stateListAnimator="@animator/animator_btn"
+                    android:text="@string/btnHistoryDelete"
+                    android:textColor="@color/text_gray"
+                    android:textSize="12dp"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/searchHistoryContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/searchHistoryRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:id="@+id/searchHistoryMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_gradient_bottom_white"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="24dp"
+                    android:text="@string/btnMore"
+                    android:textColor="@color/text_gray"
+                    android:textSize="12dp"
+                    tools:ignore="ContentDescription,SpUsage" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/searchRecommendTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/searchRecommendIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_baseline_thumb_up_black_48dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/titleRecommend"
+                    android:textColor="@color/text_black"
+                    android:textSize="16dp"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/searchRecommendContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/searchRecommendRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:id="@+id/searchRecommendMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_gradient_bottom_white"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="24dp"
+                    android:text="@string/btnMore"
+                    android:textColor="@color/text_gray"
+                    android:textSize="12dp"
+                    tools:ignore="ContentDescription,SpUsage" />
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/searchQueryView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="68dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchQueryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/searchNoResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="68dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_sad"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/searchNoResult"
+            android:textColor="@color/text_black"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

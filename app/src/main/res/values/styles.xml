@@ -1,0 +1,159 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/text_black</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowBackground">@color/WHITE</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+
+        <item name="themeColor">@color/RED</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorAccent">@color/text_msg</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/item_dialog_box</item>
+    </style>
+
+    <style name="AppTheme.Transparent" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- OSS License Activity Theme -->
+    <style name="LicenseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/text_black</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowBackground">@color/WHITE</item>
+        <item name="android:typeface">monospace</item>
+        <item name="actionBarStyle">@style/LicenseTheme.ActionBar</item>
+        <item name="navigationIcon">@drawable/ic_baseline_arrow_back_24dp</item>
+        <item name="android:textSize" tools:ignore="SpUsage">14dp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="LicenseTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="titleTextStyle">@style/LicenseTheme.ActionBar.Title</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="LicenseTheme.ActionBar.Title" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize" tools:ignore="SpUsage">16dp</item>
+    </style>
+
+    <!-- Styleable Toast Style -->
+
+    <style name="AlertToast">
+        <item name="stTextBold">false</item>
+        <item name="stTextColor">@color/toast_error</item>
+        <item name="stTextSize">14dp</item>
+        <item name="stColorBackground">@color/toast_background</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">@color/toast_error</item>
+        <item name="stIconStart">@drawable/icon_error</item>
+        <item name="stLength">LONG</item>
+        LONG or SHORT
+        <item name="stGravity">top</item>
+        top or center
+        <item name="stRadius">16dp</item>
+    </style>
+
+    <style name="MsgToast">
+        <item name="stTextBold">false</item>
+        <item name="stTextColor">@color/toast_message</item>
+        <item name="stTextSize">14dp</item>
+        <item name="stColorBackground">@color/toast_background</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">@color/toast_message</item>
+        <item name="stLength">LONG</item>
+        LONG or SHORT
+        <item name="stGravity">top</item>
+        top or center
+        <item name="stRadius">16dp</item>
+    </style>
+
+    <!-- Color themes -->
+
+    <style name="AppTheme.RED" parent="AppTheme">
+        <item name="themeColor">@color/RED</item>
+    </style>
+
+    <style name="AppTheme.Transparent.RED" parent="AppTheme.Transparent">
+        <item name="themeColor">@color/RED</item>
+    </style>
+
+    <style name="AppTheme.ORANGE" parent="AppTheme">
+        <item name="themeColor">@color/ORANGE</item>
+    </style>
+
+    <style name="AppTheme.Transparent.ORANGE" parent="AppTheme.Transparent">
+        <item name="themeColor">@color/ORANGE</item>
+    </style>
+
+    <style name="AppTheme.YELLOW" parent="AppTheme">
+        <item name="themeColor">@color/YELLOW</item>
+    </style>
+
+    <style name="AppTheme.Transparent.YELLOW" parent="AppTheme.Transparent">
+        <item name="themeColor">@color/YELLOW</item>
+    </style>
+
+    <style name="AppTheme.GREEN" parent="AppTheme">
+        <item name="themeColor">@color/GREEN</item>
+    </style>
+
+    <style name="AppTheme.Transparent.GREEN" parent="AppTheme.Transparent">
+        <item name="themeColor">@color/GREEN</item>
+    </style>
+
+    <style name="AppTheme.BLUE" parent="AppTheme">
+        <item name="themeColor">@color/BLUE</item>
+    </style>
+
+    <style name="AppTheme.Transparent.BLUE" parent="AppTheme.Transparent">
+        <item name="themeColor">@color/BLUE</item>
+    </style>
+
+    <style name="AppTheme.PURPLE" parent="AppTheme">
+        <item name="themeColor">@color/PURPLE</item>
+    </style>
+
+    <style name="AppTheme.Transparent.PURPLE" parent="AppTheme.Transparent">
+        <item name="themeColor">@color/PURPLE</item>
+    </style>
+
+    <style name="AppTheme.PINK" parent="AppTheme">
+        <item name="themeColor">@color/PINK</item>
+    </style>
+
+    <style name="AppTheme.Transparent.PINK" parent="AppTheme.Transparent">
+        <item name="themeColor">@color/PINK</item>
+    </style>
+
+    <style name="AppTheme.GRAY" parent="AppTheme">
+        <item name="themeColor">@color/GRAY</item>
+    </style>
+
+    <style name="AppTheme.Transparent.GRAY" parent="AppTheme.Transparent">
+        <item name="themeColor">@color/GRAY</item>
+    </style>
+
+</resources>

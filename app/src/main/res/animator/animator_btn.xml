@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" tools:ignore="MissingDefaultResource">
+    <item android:state_pressed="true">
+        <set>
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="scaleX"
+                android:valueTo="0.8"
+                android:interpolator="@anim/osi_btn"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="scaleY"
+                android:valueTo="0.8"
+                android:interpolator="@anim/osi_btn"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="translationZ"
+                android:valueTo="4dp"
+                android:interpolator="@anim/osi_btn"
+                android:valueType="floatType" />
+        </set>
+    </item>
+
+    <item android:state_pressed="false">
+        <set>
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="scaleX"
+                android:valueTo="1.0"
+                android:interpolator="@anim/osi_btn"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:propertyName="scaleY"
+                android:interpolator="@anim/osi_btn"
+                android:valueTo="1.0"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:interpolator="@anim/osi_btn"
+                android:propertyName="translationZ"
+                android:valueTo="4dp"
+                android:valueType="floatType" />
+        </set>
+    </item>
+
+</selector>
+
